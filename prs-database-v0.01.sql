@@ -106,3 +106,22 @@ INSERT into Products
 	('AUT3920', 'Floor Jack - 3 Ton', 129.99,'Each',(select id from vendors where code = 'HBFR')),
 	('BTCP1980','Maximum Bootcamp',15500.00, 'Each',(select id from vendors where code = 'MXTT'));
 go
+
+-- Insert Requests
+
+insert into Requests
+	(Description,Justification,DeliveryMode,Status,Total,UserId)
+	values
+	('Request 1','Not Needed','on-site','approved',250,1),
+	('Request 2','Not Needed','on-site','reviewing',200,2);
+go
+
+-- Insert Requestlines
+
+insert into Requestlines
+	(RequestId,ProductId,Quantity)
+	values
+	(1,1,1),
+	(1,2,2),
+	(2,3,3);
+go
